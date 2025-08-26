@@ -1,13 +1,13 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Navigation from './Navigation'
+import { motion } from "framer-motion";
+import Navigation from "./Navigation";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 md:pt-28">
       <Navigation />
-      
+
       <div className="absolute inset-0 gradient-bg">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-50/50 via-transparent to-accent-50/50"></div>
         <div className="absolute top-0 left-0 w-full h-full">
@@ -30,8 +30,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight"
           >
-            About{' '}
-            <span className="text-gradient">YouthCap</span>
+            About <span className="text-gradient">YouthCap</span>
           </motion.h1>
 
           <motion.p
@@ -40,7 +39,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
           >
-            YouthCap is a student-led initiative that empowers teens around the world to explore economics, finance, and global markets.
+            YouthCap is a student-led initiative that empowers teens around the
+            world to explore economics, finance, and global markets.
           </motion.p>
 
           <motion.p
@@ -49,7 +49,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed"
           >
-            We make financial education accessible for all by exploring topics like investing, inflation, global trade, and more through real projects.
+            We make financial education accessible for all by exploring topics
+            like investing, inflation, global trade, and more through real
+            projects.
           </motion.p>
 
           <motion.div
@@ -74,20 +76,21 @@ const Hero = () => {
           >
             {[
               {
-                icon: '🎯',
-                title: 'Learn by Doing',
-                description: 'Turn knowledge into action through hands-on projects'
+                icon: "🎯",
+                title: "Learn by Doing",
+                description:
+                  "Turn knowledge into action through hands-on projects",
               },
               {
-                icon: '🌍',
-                title: 'Global Community',
-                description: 'Connect with curious minds from around the world'
+                icon: "🌍",
+                title: "Global Community",
+                description: "Connect with curious minds from around the world",
               },
               {
-                icon: '💡',
-                title: 'Real Projects',
-                description: 'Explore finance through practical applications'
-              }
+                icon: "💡",
+                title: "Real Projects",
+                description: "Explore finance through practical applications",
+              },
             ].map((point, index) => (
               <motion.div
                 key={index}
@@ -97,7 +100,9 @@ const Hero = () => {
                 className="text-center p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg"
               >
                 <div className="text-4xl mb-3">{point.icon}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{point.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {point.title}
+                </h3>
                 <p className="text-gray-600">{point.description}</p>
               </motion.div>
             ))}
@@ -105,7 +110,7 @@ const Hero = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

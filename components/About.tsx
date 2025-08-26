@@ -1,38 +1,47 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { CheckCircleIcon, LightBulbIcon, GlobeAltIcon, UserGroupIcon } from '@heroicons/react/24/outline'
+import { motion } from "framer-motion";
+import {
+  CheckCircleIcon,
+  LightBulbIcon,
+  GlobeAltIcon,
+  UserGroupIcon,
+} from "@heroicons/react/24/outline";
 
 const About = () => {
   const features = [
     {
       icon: CheckCircleIcon,
-      title: 'Hands-on Learning',
-      description: 'We believe in learning by doing. Every concept is reinforced through practical projects and real-world applications.'
+      title: "Hands-on Learning",
+      description:
+        "We believe in learning by doing. Every concept is reinforced through practical projects and real-world applications.",
     },
     {
       icon: LightBulbIcon,
-      title: 'Innovation Focus',
-      description: 'Our projects encourage creative thinking and innovative solutions to real financial challenges.'
+      title: "Innovation Focus",
+      description:
+        "Our projects encourage creative thinking and innovative solutions to real financial challenges.",
     },
     {
       icon: GlobeAltIcon,
-      title: 'Global Perspective',
-      description: 'We explore international markets, trade policies, and global economic trends to broaden understanding.'
+      title: "Global Perspective",
+      description:
+        "We explore international markets, trade policies, and global economic trends to broaden understanding.",
     },
     {
       icon: UserGroupIcon,
-      title: 'Collaborative Environment',
-      description: 'Students work together in teams, sharing knowledge and building lasting connections.'
-    }
-  ]
+      title: "Collaborative Environment",
+      description:
+        "Students work together in teams, sharing knowledge and building lasting connections.",
+    },
+  ];
 
   const stats = [
-    { number: 'Growing', label: 'Student Community' },
-    { number: 'Ongoing', label: 'Learning Projects' },
-    { number: 'Global', label: 'Student Network' },
-    { number: '100%', label: 'Free Access' }
-  ]
+    { number: "Growing", label: "Student Community" },
+    { number: "Ongoing", label: "Learning Projects" },
+    { number: "Global", label: "Student Network" },
+    { number: "100%", label: "Free Access" },
+  ];
 
   return (
     <section id="about" className="py-20 bg-white">
@@ -45,11 +54,11 @@ const About = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
-            At YouthCap, we don't just{' '}
-            <span className="text-gradient">learn</span> — we{' '}
+            At YouthCap, we don't just{" "}
+            <span className="text-gradient">learn</span> — we{" "}
             <span className="text-gradient">create</span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -57,9 +66,10 @@ const About = () => {
             viewport={{ once: true }}
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
-            From research and discussions to hands-on group projects, we turn knowledge into action. 
-            Our goal is to build a global community of curious, capable, and confident young people 
-            who understand how the financial world works — and are ready to lead it!
+            From research and discussions to hands-on group projects, we turn
+            knowledge into action. Our goal is to build a global community of
+            curious, capable, and confident young people who understand how the
+            financial world works — and are ready to lead it!
           </motion.p>
         </div>
 
@@ -75,10 +85,11 @@ const About = () => {
               Our Mission
             </h3>
             <p className="text-lg text-gray-700 leading-relaxed">
-              To democratize financial education by making complex economic concepts accessible, 
-              engaging, and practical for teenagers worldwide. We believe that understanding 
-              finance and economics is not just about personal wealth, but about building a 
-              more informed and equitable global society.
+              To democratize financial education by making complex economic
+              concepts accessible, engaging, and practical for teenagers
+              worldwide. We believe that understanding finance and economics is
+              not just about personal wealth, but about building a more informed
+              and equitable global society.
             </p>
           </div>
         </motion.div>
@@ -118,9 +129,7 @@ const About = () => {
               <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-600 font-medium">
-                {stat.label}
-              </div>
+              <div className="text-gray-600 font-medium">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -146,7 +155,7 @@ const About = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
