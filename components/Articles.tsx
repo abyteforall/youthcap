@@ -38,9 +38,7 @@ const Articles = ({ items }: ArticlesProps) => {
           {items.map((a, i) => (
             <motion.a
               key={`${a.name}-${i}`}
-              href={a.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`/articles/${a.slug}`}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05 * i }}
@@ -70,7 +68,7 @@ const Articles = ({ items }: ArticlesProps) => {
                 </p>
                 <p className="text-xs text-gray-500">{a.date}</p>
               </div>
-              <p className="text-sm text-gray-500 truncate">{a.link}</p>
+              {/* Content now hosted on-site; no external link shown here */}
             </motion.a>
           ))}
         </div>
